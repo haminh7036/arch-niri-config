@@ -654,16 +654,16 @@ binds {
 
     // MINH
     // Core Noctalia binds
-    Mod+Space { spawn-sh "noctalia msg panel-toggle launcher"; }
-    Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }
-    Mod+Comma { spawn-sh "noctalia msg settings-toggle"; }
+    Mod+Space hotkey-overlay-title="Toggle App Launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+S hotkey-overlay-title="Toggle Control Center" { spawn-sh "noctalia msg panel-toggle control-center"; }
+    Mod+Comma hotkey-overlay-title="Toggle Shell Settings" { spawn-sh "noctalia msg settings-toggle"; }
 
     // Audio & Brightness
-    XF86AudioRaiseVolume { spawn-sh "noctalia msg volume-up"; }
-    XF86AudioLowerVolume { spawn-sh "noctalia msg volume-down"; }
-    XF86AudioMute { spawn-sh "noctalia msg volume-mute"; }
-    XF86MonBrightnessUp { spawn-sh "noctalia msg brightness-up"; }
-    XF86MonBrightnessDown { spawn-sh "noctalia msg brightness-down"; }
+    XF86AudioRaiseVolume hotkey-overlay-title="Raise volume" { spawn-sh "noctalia msg volume-up"; }
+    XF86AudioLowerVolume hotkey-overlay-title="Lower volume" { spawn-sh "noctalia msg volume-down"; }
+    XF86AudioMute hotkey-overlay-title="Mute/Unmute audio" { spawn-sh "noctalia msg volume-mute"; }
+    XF86MonBrightnessUp hotkey-overlay-title="Raise monitor brightness" { spawn-sh "noctalia msg brightness-up"; }
+    XF86MonBrightnessDown hotkey-overlay-title="Lower monitor brightness" { spawn-sh "noctalia msg brightness-down"; }
 }
 
 // DMS configs
@@ -678,6 +678,7 @@ layer-rule {
 }
 
 spawn-at-startup "noctalia"
+spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 
 include "noctalia.kdl"
 
@@ -703,3 +704,8 @@ recent-windows {
         Mod+Shift+Tab { previous-window; }
     }
 }
+
+environment {
+  QT_QPA_PLATFORMTHEME "qt6ct"
+}
+

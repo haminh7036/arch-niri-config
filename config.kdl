@@ -684,3 +684,22 @@ include "noctalia.kdl"
 include "basicsettings.kdl" // Added by niri-settings
 
 include "keybinds.kdl" // Added by niri-settings
+
+recent-windows {
+    highlight {
+        padding 12
+        corner-radius 12
+    }
+    previews {
+        max-height 320
+        max-scale 0.4
+    }
+    open-delay-ms 150
+
+    binds {
+        Alt+Tab { next-window; }
+        Alt+Shift+Tab { previous-window; }
+        Mod+Tab { next-window; }
+        Mod+Shift+Tab { previous-window; }
+    }
+}

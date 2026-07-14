@@ -19,6 +19,12 @@ window-rule {
     open-floating true
 }
 
+// Prevent Fcitx5 input method candidate windows from tiling, which causes flickering/jittering in terminals/apps
+window-rule {
+    match app-id="fcitx"
+    open-floating true
+}
+
 // Floating Noctalia settings window
 window-rule {
     match app-id="dev.noctalia.Noctalia.Settings"

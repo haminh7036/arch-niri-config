@@ -1,0 +1,57 @@
+// Input devices, Gestures, and Keyboard shortcuts settings
+
+input {
+    // Modifier key used for Niri commands (Super / Mod4)
+    mod-key "Super"
+    
+    touchpad {
+        tap
+        natural-scroll
+        drag false
+        click-method "button-areas"
+        scroll-method "two-finger"
+        accel-speed 0.20
+        accel-profile "adaptive"
+        tap-button-map "left-right-middle"
+        scroll-factor 1.0
+    }
+    
+    mouse {
+        accel-speed 0.20
+        accel-profile "adaptive"
+        scroll-factor 1.0
+    }
+    
+    keyboard {
+        track-layout "global"
+        numlock
+        xkb {
+            layout "us"
+        }
+        repeat-delay 600
+        repeat-rate 25
+    }
+}
+
+// Cursor appearance
+cursor {
+    xcursor-theme "Adwaita"
+    xcursor-size 24
+}
+
+// Touchpad gestures
+gestures {
+    hot-corners {
+        top-left
+    }
+}
+
+// Keybindings overlay helper
+hotkey-overlay {
+    hide-not-bound
+}
+
+// Overview workspace zoom level
+overview {
+    zoom 0.4
+}

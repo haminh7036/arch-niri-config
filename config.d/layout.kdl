@@ -1,0 +1,62 @@
+// Layout and Animation configuration
+
+layout {
+    // Gap sizes around windows
+    gaps 8
+
+    // Default display mode for new columns ("tabbed" or "stacked")
+    default-column-display "tabbed"
+
+    // When to center a column when changing focus
+    center-focused-column "never"
+
+    // Custom presets for column widths (toggled by Mod+R)
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    // Default width of new windows
+    default-column-width { proportion 0.5; }
+
+    focus-ring {
+        width 2
+    }
+
+    border {
+        off
+        width 2
+    }
+
+    shadow {
+        on
+    }
+
+    insert-hint {
+        color "#ffc87f70"
+    }
+
+    tab-indicator {
+        hide-when-single-tab
+        place-within-column
+        corner-radius 4
+        width 4
+        length total-proportion=1.0
+        gap 4
+        gaps-between-tabs 2
+    }
+
+    struts {
+        left 0
+        right 0
+        top 0
+        bottom 0
+    }
+}
+
+// Window animations
+animations {
+    on
+    slowdown 1.0
+}

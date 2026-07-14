@@ -1,0 +1,40 @@
+// Window rules, layer rules, and debug settings
+
+// Default window appearance & behavior
+window-rule {
+    geometry-corner-radius 20
+    clip-to-geometry true
+    draw-border-with-background false
+}
+
+// Work around WezTerm's initial configure bug
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+
+// Open Firefox picture-in-picture player as floating by default
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+// Floating Noctalia settings window
+window-rule {
+    match app-id="dev.noctalia.Noctalia.Settings"
+    open-floating true
+    default-column-width { fixed 1080; }
+    default-window-height { fixed 920; }
+}
+
+// Backdrop layer rule for Noctalia
+layer-rule {
+    match namespace="^noctalia-backdrop"
+    place-within-backdrop true
+}
+
+// Debug options
+debug {
+    // Allows notification actions and window activation from Noctalia
+    honor-xdg-activation-with-invalid-serial
+}

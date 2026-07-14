@@ -1,3 +1,0 @@
-binds {
-    Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
-}

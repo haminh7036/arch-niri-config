@@ -22,3 +22,8 @@ Chạy lệnh sau trước khi áp dụng cấu hình mới:
 ```bash
 niri validate
 ```
+
+## Giấy phép (License)
+
+Dự án này được cấp phép dưới dạng mã nguồn mở theo [MIT License](LICENSE).
+

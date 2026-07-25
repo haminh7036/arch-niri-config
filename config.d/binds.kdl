@@ -5,10 +5,10 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Open Ghostty terminal
-    Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
+    Mod+T hotkey-overlay-title="Open Terminal" { spawn "ghostty"; }
 
     // Screen locker
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
+    Super+Alt+L hotkey-overlay-title="Lock Screen" { spawn "hyprlock"; }
 
     // Toggle screen reader
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
@@ -132,8 +132,8 @@ binds {
     Mod+Ctrl+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
 
-    Mod+F { maximize-column; }
-    Mod+Shift+F { fullscreen-window; }
+    Mod+F hotkey-overlay-title="Maximize Column" { maximize-column; }
+    Mod+Shift+F hotkey-overlay-title="Toggle Fullscreen" { fullscreen-window; }
     Mod+M { maximize-window-to-edges; }
     Mod+Ctrl+F { expand-column-to-available-width; }
     Mod+C { center-column; }
@@ -173,11 +173,11 @@ binds {
     Mod+Comma hotkey-overlay-title="Toggle Shell Settings" { spawn-sh "noctalia msg settings-toggle"; }
 
     // Audio & Brightness (Noctalia)
-    XF86AudioRaiseVolume hotkey-overlay-title="Raise volume" { spawn-sh "noctalia msg volume-up"; }
-    XF86AudioLowerVolume hotkey-overlay-title="Lower volume" { spawn-sh "noctalia msg volume-down"; }
-    XF86AudioMute hotkey-overlay-title="Mute/Unmute audio" { spawn-sh "noctalia msg volume-mute"; }
-    XF86MonBrightnessUp hotkey-overlay-title="Raise monitor brightness" { spawn-sh "noctalia msg brightness-up"; }
-    XF86MonBrightnessDown hotkey-overlay-title="Lower monitor brightness" { spawn-sh "noctalia msg brightness-down"; }
+    XF86AudioRaiseVolume hotkey-overlay-title="Raise Volume" { spawn-sh "noctalia msg volume-up"; }
+    XF86AudioLowerVolume hotkey-overlay-title="Lower Volume" { spawn-sh "noctalia msg volume-down"; }
+    XF86AudioMute hotkey-overlay-title="Mute Audio" { spawn-sh "noctalia msg volume-mute"; }
+    XF86MonBrightnessUp hotkey-overlay-title="Raise Brightness" { spawn-sh "noctalia msg brightness-up"; }
+    XF86MonBrightnessDown hotkey-overlay-title="Lower Brightness" { spawn-sh "noctalia msg brightness-down"; }
 }
 
 // Alt+Tab window switcher settings

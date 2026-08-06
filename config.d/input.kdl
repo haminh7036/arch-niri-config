@@ -13,13 +13,11 @@ input {
         accel-speed 0.20
         accel-profile "adaptive"
         tap-button-map "left-right-middle"
-        scroll-factor 1.0
     }
     
     mouse {
         accel-speed 0.20
         accel-profile "adaptive"
-        scroll-factor 1.0
     }
     
     keyboard {

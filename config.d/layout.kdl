@@ -33,10 +33,6 @@ layout {
         on
     }
 
-    insert-hint {
-        color "#ffc87f70"
-    }
-
     tab-indicator {
         hide-when-single-tab
         place-within-column
@@ -46,17 +42,4 @@ layout {
         gap 4
         gaps-between-tabs 2
     }
-
-    struts {
-        left 0
-        right 0
-        top 0
-        bottom 0
-    }
-}
-
-// Window animations
-animations {
-    on
-    slowdown 1.0
 }

@@ -146,8 +146,8 @@ binds {
     Mod+Shift+Equal { set-window-height "+10%"; }
 
     // Floating layout
-    Mod+V       { toggle-window-floating; }
-    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+    Mod+B       { toggle-window-floating; }
+    Mod+Shift+B { switch-focus-between-floating-and-tiling; }
 
     // Tabbed column
     Mod+W { toggle-column-tabbed-display; }
@@ -170,6 +170,7 @@ binds {
     // --- Core Noctalia Binds ---
     Mod+Space hotkey-overlay-title="Toggle App Launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+S hotkey-overlay-title="Toggle Control Center" { spawn-sh "noctalia msg panel-toggle control-center"; }
+    Mod+V hotkey-overlay-title="Toggle Clipboard History" { spawn-sh "noctalia msg panel-toggle clipboard"; }
     Mod+Comma hotkey-overlay-title="Toggle Shell Settings" { spawn-sh "noctalia msg settings-toggle"; }
 
     // Audio & Brightness (Noctalia)

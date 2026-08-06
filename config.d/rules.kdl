@@ -12,10 +12,12 @@ window-rule {
     default-column-width {}
 }
 
-// Open Firefox picture-in-picture player as floating by default
+// Open Picture-in-Picture video players as floating by default (Chrome, Firefox, Edge)
 window-rule {
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match title=r#"(?i)picture.*in.*picture"#
     open-floating true
+    default-column-width { fixed 480; }
+    default-window-height { fixed 270; }
 }
 
 // Prevent Fcitx5 input method candidate windows from tiling, which causes flickering/jittering in terminals/apps

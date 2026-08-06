@@ -4,13 +4,6 @@
 window-rule {
     geometry-corner-radius 20
     clip-to-geometry true
-    draw-border-with-background false
-}
-
-// Subtle opacity dimming for unfocused windows
-window-rule {
-    match is-focused=false
-    opacity 0.85
 }
 
 // Work around WezTerm's initial configure bug

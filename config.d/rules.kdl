@@ -24,6 +24,24 @@ window-rule {
     open-floating true
 }
 
+// Open gThumb image viewer as floating by default
+window-rule {
+    match app-id=r#"(?i)gthumb"#
+    open-floating true
+}
+
+// Open Cine video player as floating by default
+window-rule {
+    match app-id=r#"(?i)cine"#
+    open-floating true
+}
+
+// Open file pickers and save dialogs as floating by default
+window-rule {
+    match title=r#"(?i)(open|save|select) (file|folder|directory)"#
+    open-floating true
+}
+
 // Floating Noctalia settings window
 window-rule {
     match app-id="dev.noctalia.Noctalia.Settings"

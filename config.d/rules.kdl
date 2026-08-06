@@ -7,6 +7,12 @@ window-rule {
     draw-border-with-background false
 }
 
+// Subtle opacity dimming for unfocused windows
+window-rule {
+    match is-focused=false
+    opacity 0.85
+}
+
 // Work around WezTerm's initial configure bug
 window-rule {
     match app-id=r#"^org\.wezfurlong\.wezterm$"#

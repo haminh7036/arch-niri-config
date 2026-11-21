@@ -8,7 +8,7 @@ binds {
     Mod+T hotkey-overlay-title="Open Terminal" { spawn "ghostty"; }
 
     // Screen locker
-    Super+Alt+L hotkey-overlay-title="Lock Screen" { spawn "hyprlock"; }
+    Super+Alt+L hotkey-overlay-title="Lock Screen" { spawn-sh "hyprlock & sleep 30 && pgrep -x hyprlock && niri msg action power-off-monitors"; }
 
     // Toggle screen reader
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
